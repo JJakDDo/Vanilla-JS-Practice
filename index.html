@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="pignose.calendar.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+        <script src="pignose.calendar.full.min.js"></script>
+    </head>
+    <body>
+        <input type="text" id="text-calendar" class="calendar" placeholder="체크인"/>
+        <input type="text" id="text-calendar" class="calendar" placeholder="체크아웃"/>
+        
+        <script>            
+            $('.calendar').pignoseCalendar({
+                format: 'YYYY-MM-DD',
+                theme: 'blue',
+                lang: 'ko',
+                //multiple: true,
+                disabledDates: [
+                ],
+                minDate: moment().add(1, 'd').format("YYYY-MM-DD") //과거 날짜는 예약 못하게
+            });
+        </script>
+        
+    </body>
+</html>
