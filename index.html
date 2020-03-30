@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="pignose.calendar.min.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
-        <script src="pignose.calendar.full.min.js"></script>
-    </head>
-    <body>
-        <input type="text" id="text-calendar" class="calendar" placeholder="체크인"/>
-        <input type="text" id="text-calendar" class="calendar" placeholder="체크아웃"/>
-        
-        <script>            
-            $('.calendar').pignoseCalendar({
-                format: 'YYYY-MM-DD',
-                theme: 'blue',
-                lang: 'ko',
-                //multiple: true,
-                disabledDates: [
-                ],
-                minDate: moment().add(1, 'd').format("YYYY-MM-DD") //과거 날짜는 예약 못하게
-            });
-        </script>
-        
-    </body>
+<head>
+    <title>haha</title>
+    <link rel = "stylesheet" href="index.css" />
+</head>
+<body>
+    <div class = "clock">
+        <h1>00:00</h1>
+    </div>
+    <form class = "js-form form" >
+        <input type="text" placeholder="What is your name?" />
+    </form>
+    <form class="js-toDoForm">
+        <input type="text" placeholder="Write to do" />
+    </form>
+    <ul class="js-toDoList"></ul>
+    <h4 class="js-greetings greeting"></h4>
+    <script src="clock.js"></script>
+    <script src="greeting.js"></script>
+    <script src="todo.js"></script>
+    <script src="bg.js"></script>
+    <script src="weather.js"></script>
+</body>
 </html>
